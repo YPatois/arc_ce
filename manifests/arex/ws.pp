@@ -12,4 +12,6 @@ class arc_ce::arex::ws(
     }
   }
 
+  # arex/ws/jobs blocks
+  contain 'arc_ce::arex::ws::jobs'
 }

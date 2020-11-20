@@ -5,7 +5,7 @@ slapd_hostnamebind = <%= @slapd_hostnamebind %>
 <% end -%>
 port = <%= @port %>
 <% unless @user.nil? -%>
-user = <%= user %>
+user = <%= @user %>
 <% end -%>
 <% unless @slapd.nil? %>
 slapd = <%= @slapd %>

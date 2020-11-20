@@ -5,6 +5,11 @@ verify_proxy = "lcmaps_verify_proxy.mod"
                     "--discard_private_key_absence"
                     "--allow-limited-proxy"
 
+vomspoolaccount  = "lcmaps_voms_poolaccount.mod"
+                       "-gridmapfile /etc/grid-security/grid-mapfile"
+                       "-gridmapdir /etc/grid-security/gridmapdir"
+
+
 pepc = "lcmaps_c_pep.mod"
             "--pep-daemon-endpoint-url https://<%= @argus_server %>:8154/authz"
             "--resourceid http://authz-interop.org/xacml/resource/resource-type/arc"
@@ -15,4 +20,5 @@ pepc = "lcmaps_c_pep.mod"
 
 # Policies:
 arc:
-verify_proxy -> pepc
+verify_proxy -> vomspoolaccount
+#verify_proxy -> pepc
